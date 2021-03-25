@@ -1,0 +1,8 @@
+# Unity
+*.meta
+
+# JetBrains
+.idea/
+
+# Visual Studio cache directory
+.vs/
