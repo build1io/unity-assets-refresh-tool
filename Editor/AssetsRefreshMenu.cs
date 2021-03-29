@@ -39,9 +39,8 @@ namespace Build1.AssetsRefreshTool.Editor
                                         "Refresh on Play - disables the Auto Refresh and performs refresh on play.\n\n" +
                                         "With Refresh on Play enabled Unity Editor will not update project assets/metadata. You'll have to refresh it manually by using your OS's hot key.\n\n" +
                                         "Refresh on Play saves a lot of time when you work mostly on the code. Code changes and window switching will not stop play and will not trigger scripts recompilation when you don't need it.\n\n" +
-                                        "Good luck!",
+                                        "Author: Vasyl Horbachenko",
                                         "Got it!");
-            
         }
         
         /*
