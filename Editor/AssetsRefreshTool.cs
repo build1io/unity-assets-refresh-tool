@@ -13,7 +13,7 @@ namespace Build1.AssetsRefreshTool.Editor
 
         static AssetsRefreshTool()
         {
-            SetEnabled(GetEnabled(), false);
+            SetEnabled(GetEnabled(), true, false);
         }
 
         public static bool GetEnabled()
@@ -21,9 +21,9 @@ namespace Build1.AssetsRefreshTool.Editor
             return EditorPrefs.GetBool(RefreshOnPlayKey);
         }
 
-        public static bool SetEnabled(bool enabled, bool printToLog = true)
+        public static bool SetEnabled(bool enabled, bool force = false, bool printToLog = true)
         {
-            if (GetEnabled() == enabled)
+            if (GetEnabled() == enabled && !force)
                 return false;
 
             EditorPrefs.SetBool(AutoRefreshKeyKey, !enabled);
