@@ -2,7 +2,7 @@
 
 using UnityEditor;
 
-namespace Build1.AssetsRefreshTool.Editor
+namespace Build1.UnityAssetsRefreshTool.Editor
 {
     [InitializeOnLoad]
     internal static class AssetsRefreshMenu
