@@ -1,5 +1,6 @@
 #if UNITY_EDITOR
 
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -72,7 +73,15 @@ namespace Build1.UnityAssetsRefreshTool.Editor
             {
                 EnableAutoRefresh();
                 EditorApplication.playModeStateChanged -= OnPlayModeStateChanged;
-                AssetDatabase.Refresh(ImportAssetOptions.Default);
+
+                try
+                {
+                    AssetDatabase.Refresh(ImportAssetOptions.Default);
+                }
+                catch
+                {
+                    // ignored
+                }
             }
 
             if (printToLog)
